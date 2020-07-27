@@ -1,0 +1,14 @@
+version: '3'
+services:
+  telegraf:
+    # Full tag list: https://hub.docker.com/r/library/telegraf/tags/
+    image: "telegraf"
+    environment:
+      HOSTNAME: "Notebook-telegraph"
+      # Telegraf requires network access to InfluxDB
+    volumes:
+      # Mount for telegraf configuration
+      - ./:/etc/telegraf/
+      # Mount for Docker API access
+      #- /var/run/docker.sock:/var/run/docker.sock
+    restart: always
