@@ -5,7 +5,8 @@
   - Edit the URL for InfluxDB (ex. ["http://192.168.1.20:8086"]
 
 # Grafana
-1. Dashboards > Manage > Import
+1. Add new InfluxDB datasource in Grafana and map it to "virtualmachines" database
+2. Dashboards > Manage > Import
 2. Import System Metrics Dashboard ID- 5955
 3. Select database "virtualmachines"
 
